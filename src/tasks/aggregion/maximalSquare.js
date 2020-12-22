@@ -21,15 +21,14 @@ export const maximalSquare = (m) => {
               }
             }
             if (!a) {
-              //break;
-              //quit = true;
+              break;
             } else {
               size++;
             }
 
           }
         } catch (e) {
-          quit = true;
+          break;
         }
       }
       i++;
