@@ -17,7 +17,7 @@ test('2 dims matrix', () => {
   ])).toBe(1);
 });
 
-test('5 dims matrix', () => {
+test('5 dims matrix (original)', () => {
   expect(maximalSquare([
     ['1', '0', '1', '1', '1'],
     ['1', '0', '1', '1', '1'],
