@@ -46,6 +46,6 @@ export const maximalSquare = (m) => {
     });
   });
 
-  return maxSize;
+  return maxSize * maxSize;
 }
 
