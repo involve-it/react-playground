@@ -30,3 +30,61 @@ test('original - 2', () => {
     ]));
 });
 
+test('original - 3', () => {
+  expect(groupingDishes([
+    [
+      "First",
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i"
+    ],
+    [
+      "Second",
+      "i",
+      "h",
+      "g",
+      "f",
+      "e",
+      "x",
+      "c",
+      "b",
+      "a"
+    ]
+  ])).toEqual(
+    expect.arrayContaining([
+      expect.arrayContaining([
+        "a",
+        "First",
+        "Second"]),
+      expect.arrayContaining([
+        "b",
+        "First",
+        "Second"]),
+      expect.arrayContaining(["c",
+        "First",
+        "Second"]),
+      expect.arrayContaining([ "e",
+        "First",
+        "Second"]),
+
+      expect.arrayContaining([                 "f",
+        "First",
+        "Second"]),
+      expect.arrayContaining([ "g",
+        "First",
+        "Second"]),
+      expect.arrayContaining([                 "h",
+        "First",
+        "Second"]),
+      expect.arrayContaining([              "i",
+        "First",
+        "Second"]),
+    ]));
+});
+

@@ -1,22 +1,22 @@
 export const maximalSquare = (m) => {
   let maxSize = 0, sizeCur;
   const checkDiag = (x, y) => {
-    let i = 0;
-    let size = 1;
+    let j = 0;
+    let size = 0;
     let quit = false;
     do {
-      if (i >= m.length) {
+      if (j >= m.length) {
         quit = true;
       } else {
         try {
           if (m[x + size][y + size] === '1') {
             let a = true;
 
-            for (let i = x; i < size; i++) {
-              if (m[i][y + size] !== '1') {
+            for (let i = 0; i <= size; i++) {
+              if (m[x + i][y + size] !== '1') {
                 a = false;
               }
-              if (m[x + size][i] !== '1') {
+              if (m[x + size][y + i] !== '1') {
                 a = false;
               }
             }
@@ -31,7 +31,7 @@ export const maximalSquare = (m) => {
           break;
         }
       }
-      i++;
+      j++;
     } while (!quit);
     return size;
   }

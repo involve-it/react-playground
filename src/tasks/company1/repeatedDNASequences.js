@@ -20,7 +20,7 @@ export const repeatedDNASequences = (dna) => {
 
   }
 
-  return Object.keys(repeatedDnas);
+  return Object.keys(repeatedDnas).sort();
 }
 
 const hasSequence = (seq, str) => {
