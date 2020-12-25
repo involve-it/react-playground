@@ -25,13 +25,10 @@ export const findDeadlock = (graph) => {
 
   for (let i = 0; i < graph.length; i++) {
     const used = new Array(graph.length);
-
-    if (!used[i]) {
-      const res = dfs(i, -1, used);
-      if (!res) {
-        ret = true;
-        break;
-      }
+    const res = dfs(i, -1, used);
+    if (!res) {
+      ret = true;
+      break;
     }
   }
 
